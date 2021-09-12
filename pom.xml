@@ -24,7 +24,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>8</java.version>
 		<sonar.projectKey>divyaub_usersonar</sonar.projectKey>
-            <sonar.organization>divya</sonar.organization>
+            <sonar.organization>divyaub</sonar.organization>
              <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
