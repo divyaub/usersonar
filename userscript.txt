@@ -1,0 +1,35 @@
+drop database userdb;
+create schema userdb;
+use userdb;
+
+
+create table buyer(buyerid varchar(50) primary key,name varchar(50),email varchar(50),phoneno varchar(10),password varchar(25),isprivileged boolean,rewardpoints int,isactive boolean);
+insert into buyer values('B100','Divya','divya@gmail.com','9009009001','Divya@112',true,150,true);
+insert into buyer values('B101','Pranali','pranali@gmail.com','9009009002','Pranali@123',true,50,false);
+insert into buyer values('B102','Himanshi','himanshi@gmail.com','9009009005','Himanshi@132',false,20,true);
+
+select * from buyer;
+
+
+create table seller(sellerid varchar(10) primary key,name varchar(50),email varchar(50),phoneno varchar(10),password varchar(25),isactive boolean);
+insert into seller values('1','divya','divya@gmail.com','8008008003','Divya@112',true);
+insert into seller values('2','pranali','pranali@gmail.com','8008008002','pranali@134',false);
+insert into seller values('3','himanshi','himanshi@gmail.com','8008008001','Himanshi@132',true);
+
+select * from seller;
+
+create table wishlist(buyerid varchar(50),prodid varchar(50),primary key(buyerid,prodid));
+insert into wishlist values('B101','P101');
+insert into wishlist values('B102','P102');
+insert into wishlist values('B103','P103');
+
+select * from wishlist;
+
+
+
+create table cart(buyerid varchar(50),prodid varchar(50),quantity integer,primary key(buyerid,prodid));
+insert into cart values('B101','P101',1);
+insert into cart values('B102','P102',2);
+insert into cart values('B103','P103',3);
+
+select * from cart;
